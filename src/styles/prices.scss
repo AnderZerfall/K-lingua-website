@@ -1,0 +1,160 @@
+@import 'generalStyles.scss';
+
+.section:not(:first-child) {
+    margin-top: $section-margin-t;
+}
+
+.prices-section {
+
+    margin-bottom: $section-margin-m;
+
+    &__toggle {
+        margin-bottom: $section-margin-t;
+    }
+    &__container {
+        flex-direction: column;
+        align-items: center;
+
+        @media (max-width: 1600px) {
+            width: 100%;
+        }
+    }
+    &__cards {
+        display: none;
+
+        &--active {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: $gap;
+            animation: cardAppearing 700ms ease-in-out 1;
+
+            @media (max-width: 1099px) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    }
+    &__card {
+        max-width: $text-block;
+    }
+}
+
+
+.card {
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+        transform: scale(1.03);
+    }
+
+    &__header {
+        color: white;
+        box-sizing: border-box;
+        padding: $headline-margin;
+        font-family: $headline-font;
+        border-radius: $round-size;
+        position: relative;
+    }
+
+    &--yellow &__header{
+        background-color: $accent-color;
+    }
+
+    &--pink &__header{
+        background-color: $accent-color-r;
+    }
+
+    &--purple &__header{
+        background-color: $accent-color-v;
+    }
+
+    &__dashed-line {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: $round-size;
+        bottom: 0;
+        left: 0;
+        transform: translateY(50%);
+    }
+
+    &__dash {
+        background-color: $block-bg;
+        max-width: 40px;
+        border-radius: $round-size;
+        flex: 1;
+    }
+
+    &__subtitle {
+        opacity: 60%;
+        font-size: $text-size;
+        font-weight: 600;
+        color: white;
+    }
+
+    &__price {
+        color: white;
+        font-size: $headline-size;
+        line-height: $headline-line-height;
+
+        
+        @media (max-width: 768px) {
+            font-size: $headline-size-m;
+        }
+    }
+
+    &__main {
+        color: $text-color;
+        border-radius: $round-size;
+        background-color: $block-bg;
+        font-size: $text-size;
+        font-family: $text-font;
+        box-sizing: border-box;
+        padding: $headline-margin $headline-margin  $headline-margin calc(2 * $headline-margin);
+
+        @media (max-width: 768px) {
+            font-size: $button-text-size;
+            padding: $headline-size-s $headline-size-s $headline-size-s calc(2 * $headline-size-s);
+        }
+    }
+
+    &__list {
+        list-style: none
+    }
+
+    &__item {
+        position: relative;
+        line-height: calc($text-size * 1.5);
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform: translateX(-200%) scale(0.9);
+            display: block;
+            width: $icon-size;
+            height: $icon-size;
+            background: url('../img/bullet-point-tick.svg') center no-repeat;
+
+            @media (max-width: 768px) {
+                transform: translateX(-150%) scale(0.9);
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: $text-size;
+        }
+    }
+}
+
+@keyframes cardAppearing {
+    from {
+        opacity: 0;
+        transform: translateY(30%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
