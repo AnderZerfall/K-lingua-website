@@ -2,7 +2,7 @@
 
 ![](https://imgur.com/bWIgVsE.gif)
 
-### See DEMO here: https://no-conflicts-shop.netlify.app/
+### See DEMO here: [here](https://anderzerfall.github.io/K-lingua-website/src/index.html)
 
 Hello there, FUKURO is on the line!
 I'm honoured to introduce you to my recent commercial project - K-lingua website!
