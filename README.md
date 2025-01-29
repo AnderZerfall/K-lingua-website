@@ -26,11 +26,11 @@ The main goal of this project was to create a clean and user-friendly site that 
 
  ## Key features
 
-- **Performance**: Slider components can be changed dynamically by parsing different props for headlines & images.
-- **Optimized for SEO**: To improve UI, we added small cute animations and loaders.
+- **Performance**: To improve UX, I've kept things simple and minimised the amount of necessary animations
+- **Optimized for SEO**: All blocks use semantic tags, alt attributes
 - **Responsive design. Mobile first**: Our website is designed to be displayed optimally both on mobiles and desktops
 - **Cute, light animations**: To keep users engaged and improve user experience.
-- **Backend-free (Contact form)**: Due to the budget of the project, the client was insisting on implementing a backend-free application form, and so I did. Using Web3Forms I was able to implement a simple email system for my client.
+- **Backend-free (Contact form)**: Due to the project's budget, the client insisted on implementing a backend-free application form, and so I did. Using Web3Forms I was able to implement a simple email system for my client.
 
 ![](https://imgur.com/Ef3yerr.gif)
 
