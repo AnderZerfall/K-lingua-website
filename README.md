@@ -1,7 +1,8 @@
 # K-lingua - Always Step Ahead!
 
-![](https://imgur.com/IHPLZi1.gif)
-![](https://imgur.com/NsykHjS.gif)
+![](https://imgur.com/pygovIr.gif)
+![](https://imgur.com/Eku8kby.gif)
+![](https://imgur.com/dUZXM7U.gif)
 
 ### See DEMO here: https://no-conflicts-shop.netlify.app/
 
