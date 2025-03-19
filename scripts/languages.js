@@ -8,16 +8,17 @@ import { whoAreWe } from "../languages/whoAreWe.js";
 import { prices } from "../languages/prices.js";
 
 const langButtons = document.querySelectorAll('.header__lang-text');
+const CURRENT_LANG = 'k-lang';
 
 const defineLang = (langButton = null) => {
-  let lang = localStorage.getItem("lang") || "en";
+  let lang = sessionStorage.getItem(CURRENT_LANG) || "en";
 
   if (langButton) {
     lang = langButton.id;
   }
 
   currentLang = lang;
-  localStorage.setItem('lang', currentLang);
+  sessionStorage.setItem(CURRENT_LANG, currentLang);
 
   langButtons.forEach(lan => lan.id === lang ? lan.classList.remove('current') : lan.classList.add('current'));
 }
