@@ -32,7 +32,7 @@ window.onload = () => {
     let currentLang = "en";
     defineLang();
 
-    const currentPathName = window.location.pathname;
+    const currentPathName = window.location.pathname.replace(/^\/[^/]+\//, "/");;
     let currentText = { ...header, ...footer };
 
     const checkPageName = () => {
