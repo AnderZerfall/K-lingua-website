@@ -32,31 +32,39 @@ window.onload = () => {
     let currentLang = "en";
     defineLang();
 
-    const currentPathName = window.location.pathname.replace(/^\/[^/]+\//, "/");;
+    const currentPathName = window.location.pathname.replace(/^\/[^/]+\//, "/");
     let currentText = { ...header, ...footer };
 
     const checkPageName = () => {
-      switch (currentPathName) {
-        case "/index.html":
-          currentText = { ...currentText, ...home };
-          break;
-        case "/Benefits.html":
-          currentText = { ...currentText, ...benefits };
-          break;
-        case "/Contact.html":
-          currentText = { ...currentText, ...contact };
-          break;
-        case "/Prices.html":
-          currentText = { ...currentText, ...prices };
-          break;
-        case "/HowWeWork.html":
-          currentText = { ...currentText, ...howWeWork };
-          break;
-        case "/WhoAreWe.html":
-          currentText = { ...currentText, ...whoAreWe };
-          break;
-        default:
-          break;
+      if (currentPathName === "/index.html" || currentPathName === "/") {
+        currentText = { ...currentText, ...home };
+      } else if (
+        currentPathName === "/Benefits.html" ||
+        currentPathName === "benefits"
+      ) {
+        currentText = { ...currentText, ...benefits };
+      } else if (
+        currentPathName === "/Contact.html" ||
+        currentPathName === "contact"
+      ) {
+        currentText = { ...currentText, ...contact };
+      } else if (
+        currentPathName === "/Prices.html" ||
+        currentPathName === "prices"
+      ) {
+        currentText = { ...currentText, ...prices };
+      } else if (
+        currentPathName === "/HowWeWork.html" ||
+        currentPathName === "how-we-work"
+      ) {
+        currentText = { ...currentText, ...howWeWork };
+      } else if (
+        currentPathName === "/WhoAreWe.html" ||
+        currentPathName === "who-are-we"
+      ) {
+        currentText = { ...currentText, ...whoAreWe };
+      } else {
+        currentText = { ...currentText, ...home };
       }
     };
 
@@ -83,4 +91,4 @@ window.onload = () => {
       });
     });
   }, 100);
-}
+};
