@@ -36,6 +36,7 @@ window.onload = () => {
     let currentText = { ...header, ...footer };
 
     const checkPageName = () => {
+      console.log(currentPathName);
       if (currentPathName === "/index.html" || currentPathName === "/") {
         currentText = { ...currentText, ...home };
       } else if (
