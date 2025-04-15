@@ -8,7 +8,6 @@ Hello there, FUKURO is on the line!
 I'm honoured to introduce you to my recent commercial project - The k-lingua website!
 
 Let's dive into more details.
-
 ## Project's Goal & Requirements
 
 K-lingua is a simple, but still professional website built with HTML, CSS & JavaScript for a translation company based in the Czech Republic.
